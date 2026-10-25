@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bons Estudos Laura</title>
+<meta name="theme-color" content="#be185d">
+<meta name="color-scheme" content="light dark">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%B8%3C/text%3E%3C/svg%3E">
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{--bg:#fff0f6;--card:#fff;--ink:#4a1d33;--mut:#8a5a70;--p1:#be185d;--p2:#f9a8d4;--p3:#fce7f3;--bd:#f6cfe0;--ok:#15803d;--okb:#dcfce7;--no:#be123c;--nob:#ffe4e6;--sh:0 6px 18px rgba(219,39,119,.12);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2a0f1d;--card:#3b1629;--ink:#fde7f1;--mut:#d6a3bc;--p1:#f472b6;--p2:#9d3a68;--p3:#4a1c33;--bd:#6b2a4a;--ok:#86efac;--okb:#14532d;--no:#fda4af;--nob:#4c0519;--sh:0 6px 18px rgba(0,0,0,.35)}}
+:root[data-theme="dark"]{--bg:#2a0f1d;--card:#3b1629;--ink:#fde7f1;--mut:#d6a3bc;--p1:#f472b6;--p2:#9d3a68;--p3:#4a1c33;--bd:#6b2a4a;--ok:#86efac;--okb:#14532d;--no:#fda4af;--nob:#4c0519;--sh:0 6px 18px rgba(0,0,0,.35)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);background:var(--bg);-webkit-text-size-adjust:100%}
+body{margin:0;color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;touch-action:manipulation;background:radial-gradient(circle at 100% 0,var(--p3),transparent 45%),radial-gradient(circle at 0 65%,var(--p3),transparent 40%),var(--bg)}
+header{position:relative;overflow:hidden;background:linear-gradient(135deg,#e11d74,#be185d 60%,#831843);color:#fff;padding:26px 20px 24px;border-radius:0 0 32px 32px;box-shadow:var(--sh)}
+header:before,header:after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.13)}
+header:before{width:160px;height:160px;right:-45px;top:-55px}
+header:after{width:90px;height:90px;right:70px;bottom:-48px}
+h1{position:relative;margin:0;font:700 29px/1.1 Georgia,"Times New Roman",serif}
+header p{position:relative;margin:7px 0 0;font-size:14px;opacity:.96}
+main{max-width:720px;margin:0 auto;padding:18px 14px 110px}
+.card,details,.q{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:16px 18px;margin-bottom:12px;box-shadow:var(--sh)}
+details summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:28px;font-weight:700;color:var(--p1);cursor:pointer}
+details summary::-webkit-details-marker{display:none}
+details summary:after{content:"+";font-size:24px;line-height:1;transition:transform .2s}
+details[open] summary:after{transform:rotate(45deg)}
+details[open]{border-color:var(--p2)}
+details ul{margin:12px 0 0;padding-left:20px}li{margin:6px 0}
+nav{position:fixed;left:0;right:0;bottom:0;display:flex;gap:4px;background:var(--card);border-radius:22px 22px 0 0;box-shadow:0 -6px 20px rgba(219,39,119,.15);padding:8px 8px calc(8px + env(safe-area-inset-bottom,0px))}
+nav button{flex:1;min-height:54px;border:0;background:none;color:var(--mut);font:700 12px system-ui,sans-serif;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
+nav button span{font-size:21px;line-height:1}
+nav button.on{background:var(--p3);color:var(--p1)}
+button{font-family:inherit;cursor:pointer}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;margin:0 -14px 12px;padding-left:14px;padding-right:14px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;min-height:38px;border:1px solid var(--bd);background:var(--card);color:var(--ink);border-radius:20px;padding:6px 14px;font-size:14px}
+.chip.on{background:var(--p1);color:#fff;border-color:var(--p1)}
+.fc{min-height:250px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;font-size:20px;line-height:1.4;padding:24px 20px;border:2px solid var(--p2);border-radius:26px;cursor:pointer;user-select:none;-webkit-user-select:none;animation:pop .22s ease-out}
+.fc small{color:var(--mut);font-size:12px;margin-bottom:14px}
+.fc.back{background:linear-gradient(160deg,var(--p3),var(--card))}
+@keyframes pop{from{opacity:.4;transform:scale(.97)}to{opacity:1;transform:none}}
+.row{display:flex;gap:8px;margin:10px 0}
+.btn{flex:1;min-height:50px;border:2px solid var(--p1);background:var(--card);color:var(--p1);border-radius:16px;padding:10px;font-weight:700;font-size:15px}
+.btn.main{background:linear-gradient(135deg,#db2777,#9d174d);color:#fff;border-color:transparent}
+.bar{height:10px;background:var(--p3);border-radius:10px;overflow:hidden;margin:6px 0 14px}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,#f472b6,#db2777);border-radius:10px;transition:width .3s}
+.q>b{display:block;font-size:17px;line-height:1.4;margin-bottom:4px}
+.opt{display:flex;gap:10px;align-items:flex-start;width:100%;min-height:50px;text-align:left;border:1px solid var(--bd);background:var(--card);color:var(--ink);border-radius:14px;padding:11px 13px;margin-top:8px;font-size:15px}
+.lt{flex:none;width:26px;height:26px;border-radius:50%;background:var(--p3);color:var(--p1);display:grid;place-items:center;font-size:13px}
+.opt.ok{background:var(--okb);border-color:var(--ok);color:var(--ok)}
+.opt.no{background:var(--nob);border-color:var(--no);color:var(--no)}
+.opt.ok .lt{background:var(--ok);color:var(--okb)}
+.opt.no .lt{background:var(--no);color:var(--nob)}
+.ex{margin-top:12px;padding:12px 14px;background:var(--p3);border-radius:14px;font-size:14px}
+.sm{color:var(--mut);font-size:13px}
+.ring{width:150px;height:150px;margin:6px auto 14px;border-radius:50%;background:conic-gradient(var(--p1) calc(var(--v)*1%),var(--p3) 0);display:grid;place-items:center}
+.ring b{width:116px;height:116px;border-radius:50%;background:var(--card);display:grid;place-items:center;font:700 34px Georgia,serif;color:var(--p1)}
+.tw{overflow-x:auto;margin-bottom:14px;border:1px solid var(--bd);border-radius:16px;background:var(--card);box-shadow:var(--sh)}
+table{border-collapse:collapse;min-width:560px;width:100%;font-size:14px}
+th,td{padding:10px 11px;text-align:left;vertical-align:top;border-bottom:1px solid var(--bd)}
+th{background:var(--p3);color:var(--p1)}
+td:first-child{position:sticky;left:0;background:var(--card)}
+th:first-child{position:sticky;left:0}
+h2{font:700 21px Georgia,serif;color:var(--p1);margin:20px 0 10px}
+:focus-visible{outline:3px solid var(--p1);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header><h1>🌸 Bons Estudos Laura</h1><p>Imunologia: imunidade inata e ativação dos linfócitos T (AV2)</p></header>
+<main id="app"></main>
+<nav id="nav"></nav>
+<script>
+const S=[
+["🛡️ Imunidade inata: conceito","<ul><li>Primeira linha de defesa contra vírus, bactérias, fungos, protozoários e helmintos. Responde em minutos a horas e segura a infecção até a adaptativa entrar.</li><li>Já nasce pronta, não precisa de contato prévio e <b>não tem memória</b>.</li><li><b>RRPs</b> reconhecem <b>PAMPs</b>. Ex.: <b>TLRs</b> na superfície (1, 2, 4, 5, 6) e em endossomos (3, 7, 8, 9: ácidos nucleicos).</li></ul>"],
+["🧱 Barreiras","<ul><li><b>Físicas:</b> queratina da pele, mucosas, cílios da traqueia, fluxo de fluidos.</li><li><b>Químicas:</b> pH ácido (suor ~5,5 e suco gástrico), ácidos graxos sebáceos, lisozima e fosfolipase (lágrima, saliva, secreção nasal).</li><li><b>Biológicas:</b> microbiota compete por nutrientes e produz antimicrobianos.</li></ul>"],
+["🔔 Células sentinelas","<ul><li><b>Macrófagos:</b> fagocitam e secretam TNF-α, IL-1 e IL-6. Local: vasodilatação (rubor, calor), edema, IL-8. Sistêmico: febre, leucocitose, PCR.</li><li><b>Mastócitos:</b> degranulam (histamina) e produzem leucotrienos/prostaglandinas.</li><li><b>Células dendríticas:</b> capturam antígenos, migram ao linfonodo e apresentam via MHC + B7 ao T naive.</li></ul>"],
+["🚑 Células recrutadas","<ul><li><b>Neutrófilos:</b> primeiros a chegar; fagocitose rápida.</li><li><b>Monócitos:</b> chegam depois e viram macrófagos inflamatórios.</li><li><b>Eosinófilos e basófilos:</b> helmintos e alergias.</li><li><b>NK:</b> induzem apoptose de células infectadas por vírus ou tumorais.</li></ul>"],
+["🔥 Inflamação aguda","<ul><li>Sinais cardinais: calor, rubor, edema e dor.</li><li>Etapas: <b>ativação</b> (PAMPs/DAMPs) → <b>liberação</b> de citocinas e histamina → <b>recrutamento</b> (rolagem → integrinas → adesão estável → diapedese) → <b>eliminação</b>.</li><li><b>PCR</b> (fosforilcolina) e <b>LLM</b> (manose) são proteínas de fase aguda, via IL-6, e atuam como opsoninas (facilitam a fagocitose) e ativam o complemento.</li></ul>"],
+["🧬 Complemento","<ul><li>Proteínas plasmáticas circulantes, sintetizadas principalmente pelo fígado.</li><li>Vias: <b>alternativa</b> (C3b espontâneo), <b>lectina</b> (LLM) e <b>clássica</b> (C1 + IgM/IgG).</li><li>Convergem em C3 convertase → C5 convertase → via comum (C5 a C9).</li><li>Funções: opsonização (C3b), anafilatoxinas (C3a, C4a, C5a) e lise osmótica (MAC, C5b-C9).</li><li>Mecanismos de morte bacteriana: fagocitose e lise osmótica.</li></ul>"],
+["🌉 Três sinais do linfócito T","<ul><li><b>Sinal 1:</b> TCR + peptídeo no MHC (classe II para CD4+, classe I para CD8+).</li><li><b>Sinal 2:</b> CD28 (T) liga em B7 (APC). Sem ele: <b>anergia</b>.</li><li><b>Sinal 3:</b> citocinas definem o perfil do T.</li><li>Depois: IL-2 autócrina, expansão clonal, diferenciação em efetores e células de memória.</li></ul>"],
+["🤝 Ponte inata → adaptativa","<ul><li>Ocorre nos órgãos linfoides secundários (linfonodos).</li><li>APCs (ex.: dendríticas) fagocitam via RRPs, processam e apresentam via MHC II aos T virgens.</li><li>Fornecem co-estimulação (B7/CD28) e citocinas (IL-1, IL-6, IL-12).</li><li>A inata influencia a escolha entre Th1, Th2 ou Th17.</li></ul>"],
+["🧫 Subtipos de T","<ul><li><b>Th1</b> (IL-12/IFN-γ): ativa macrófagos (NO e ROS) contra intracelulares, como Mycobacterium, e ajuda CD8+. Citocinas: IFN-γ e IL-2.</li><li><b>Th2</b> (IL-4): IgE (liga em mastócitos e basófilos), eosinófilos (IL-5), muco e peristaltismo (IL-13) contra helmintos e alérgenos.</li><li><b>Th17</b> (TGF-β + IL-6): IL-17 e IL-22; neutrófilos, peptídeos antimicrobianos e proteção de mucosas contra fungos e bactérias extracelulares.</li><li><b>CTL (CD8+):</b> Th1 → IL-2, IFN-γ e IL-15 → CD8+ virgem → CTL. Migram aos tecidos e matam células infectadas (vírus, bactérias/parasitas citoplasmáticos) ou tumorais com perforinas e granzimas. Reconhecem peptídeos via MHC I em qualquer célula nucleada.</li><li><b>Memória:</b> parte dos clones vira T de memória.</li></ul>"]
+];
+const C=[
+["Inata","Quando age a imunidade inata e ela tem memória?","Age em minutos a horas. Já nasce pronta (exceto o amadurecimento da microbiota), sem contato prévio. Não tem memória imunológica."],
+["Inata","O que os RRPs reconhecem?","PAMPs, padrões moleculares associados a patógenos."],
+["Inata","Onde ficam os TLRs 1, 2, 4, 5 e 6?","Na superfície celular, reconhecendo componentes de membrana."],
+["Inata","Onde ficam os TLRs 3, 7, 8 e 9?","Nos endossomos, reconhecendo ácidos nucleicos virais e bacterianos."],
+["Inata","Barreiras químicas: exemplos","pH ácido (suor ~5,5 e suco gástrico), ácidos graxos sebáceos, lisozima e fosfolipase."],
+["Células","Quem são as células sentinelas?","Macrófagos teciduais, mastócitos e células dendríticas."],
+["Células","Ações locais de TNF-α, IL-1 e IL-6","Vasodilatação (rubor, calor), aumento da permeabilidade (edema) e quimiocinas (IL-8)."],
+["Células","Ações sistêmicas dessas citocinas","Febre (hipotálamo), leucocitose (medula óssea) e proteínas de fase aguda (fígado)."],
+["Células","O que os mastócitos fazem?","Degranulam histamina e sintetizam leucotrienos/prostaglandinas: vasodilatação e permeabilidade rápidas."],
+["Células","Papel das células dendríticas","Capturam antígenos, migram ao linfonodo e apresentam via MHC com B7 ao linfócito T naive."],
+["Células","Primeiro leucócito a chegar ao tecido?","Neutrófilo. Depois vêm os monócitos, que viram macrófagos inflamatórios."],
+["Células","Função das células NK","Reconhecem células próprias infectadas por vírus ou tumorais e induzem apoptose."],
+["Moléculas","O que é a PCR?","Proteína de fase aguda (IL-6, fígado) que liga fosforilcolina bacteriana. Biomarcador e opsonina."],
+["Moléculas","O que é a LLM?","Liga-se à manose do patógeno. Opsonina e ativa o complemento (via da lectina)."],
+["Inflamação","Etapas da inflamação","Ativação → liberação de mediadores → recrutamento leucocitário → eliminação."],
+["Inflamação","Fases do recrutamento de leucócitos","Rolagem → ativação de integrinas → adesão estável → diapedese/migração."],
+["Complemento","Três vias de ativação","Alternativa (C3b espontâneo), lectina (LLM) e clássica (C1 + IgM/IgG)."],
+["Complemento","Ponto de convergência","C3 clivado pela C3 convertase → C5 convertase → via comum (C5 a C9)."],
+["Complemento","Funções biológicas","Opsonização (C3b), inflamação (C3a, C4a, C5a) e lise osmótica (MAC, C5b-C9)."],
+["Linfócitos T","Sinal 1","TCR reconhece peptídeo + MHC (classe II para CD4+, classe I para CD8+)."],
+["Linfócitos T","Sinal 2 e a falta dele","CD28 do T liga em B7 da APC. Sem o sinal 2, ocorre anergia."],
+["Linfócitos T","Sinal 3","Citocinas da APC e do microambiente que definem o perfil funcional do T."],
+["Linfócitos T","Expansão clonal","T produz IL-2 e a cadeia de alta afinidade do receptor. IL-2 autócrina gera milhares de clones."],
+["Linfócitos T","Th1","Induzido por IL-12/IFN-γ. Ativa macrófagos (NO e ROS) contra intracelulares e ajuda CD8+."],
+["Linfócitos T","Th2","Induzido por IL-4. IL-4, IL-5 e IL-13: IgE, eosinófilos, muco e peristaltismo contra helmintos."],
+["Linfócitos T","Th17","Induzido por TGF-β + IL-6. IL-17 e IL-22: recrutam neutrófilos contra fungos e bactérias extracelulares."],
+["Linfócitos T","LTCD8+ citotóxico","Reconhece peptídeo endógeno via MHC I em qualquer célula nucleada e mata com perforinas e granzimas."],
+["Linfócitos T","Células de memória","Parte dos clones vira T de memória: resposta mais rápida e potente no próximo contato."]
+];
+const Q=[
+["Qual característica é da imunidade inata?",["Memória imunológica","Depende de clones específicos","Já nasce pronta, sem contato prévio","Demora dias para agir"],2,"Ela é rápida, pronta e sem memória."],
+["Os TLRs localizados nos endossomos são:",["TLR 1, 2, 4, 5 e 6","TLR 3, 7, 8 e 9","Apenas o TLR 4","TLR 1 e 2"],1,"Os endossomais reconhecem ácidos nucleicos virais e bacterianos."],
+["Quais enzimas destroem a parede bacteriana na lágrima e na saliva?",["Perforina e granzima","Lisozima e fosfolipase","Histamina e heparina","IL-8 e IL-6"],1,"São barreiras químicas."],
+["Qual leucócito é o primeiro a chegar ao sítio inflamatório?",["Monócito","Eosinófilo","Neutrófilo","Célula NK"],2,"Monócitos vêm depois e viram macrófagos."],
+["A IL-6 age no fígado para:",["Induzir febre","Estimular a síntese de proteínas de fase aguda","Causar degranulação","Induzir troca para IgE"],1,"Ex.: PCR e LLM."],
+["Ordem correta do recrutamento leucocitário:",["Rolagem → integrinas → adesão estável → diapedese","Diapedese → rolagem → adesão → integrinas","Adesão → rolagem → diapedese → integrinas","Integrinas → diapedese → rolagem → adesão"],0,"Rolagem, ativação de integrinas, adesão estável e migração."],
+["A via clássica do complemento é ativada por:",["C3b espontâneo","LLM ligada à manose","C1 ligado a anticorpos (IgM/IgG)","C5 convertase"],2,"É a ponte com a imunidade adaptativa."],
+["O Complexo de Ataque à Membrana (MAC) é formado por:",["C3a, C4a e C5a","C5b a C9","C1 a C3","Apenas C3b"],1,"Forma poros e causa lise osmótica."],
+["São anafilatoxinas:",["C5b-C9","C3b","C3a, C4a e C5a","C1q"],2,"Degranulam mastócitos e atraem neutrófilos."],
+["O que acontece sem o sinal 2 (CD28–B7)?",["Expansão clonal","Anergia","Diferenciação em Th1","Formação de memória"],1,"Inativação permanente do linfócito T."],
+["O LT CD4+ reconhece peptídeos apresentados em:",["MHC classe I","MHC classe II","B7","IL-2"],1,"CD8+ usa MHC classe I."],
+["Qual citocina induz diferenciação em Th1?",["IL-4","TGF-β + IL-6","IL-12 / IFN-γ","IL-5"],2,"IL-4 gera Th2; TGF-β + IL-6 gera Th17."],
+["Qual perfil combate helmintos com IgE, eosinófilos (IL-5) e muco (IL-13)?",["Th1","Th17","Th2","CTL"],2,"Th2: IL-4, IL-5 e IL-13."],
+["Qual perfil recruta neutrófilos para mucosas contra fungos e bactérias extracelulares?",["Th17","Th1","Th2","NK"],0,"Via IL-17 e IL-22."],
+["Quem mata células infectadas usando perforinas e granzimas?",["Th2","Macrófagos","Basófilos","LTCD8+ citotóxicos"],3,"Reconhecem peptídeos via MHC I."],
+["Quanto tempo leva para a imunidade inata começar a responder?",["Minutos a horas","Dias a semanas","Só após exposição prévia","Meses"],0,"Resposta rápida, iniciada em minutos a horas."],
+["Como a imunidade inata identifica os microrganismos?",["RRPs reconhecendo PAMPs","TCR reconhecendo peptídeo no MHC","Anticorpos específicos","Memória de contatos anteriores"],0,"RRPs (como os TLRs) detectam PAMPs."],
+["Os TLRs endossomais identificam:",["Ácidos nucleicos virais e bacterianos","Componentes de membrana","Histamina","Quimiocinas"],0,"Os de superfície reconhecem componentes de membrana."],
+["Qual é exemplo de barreira física/mecânica?",["Cílios da traqueia","Lisozima","pH do suco gástrico","Competição da microbiota"],0,"Lisozima e pH são químicas; microbiota é biológica."],
+["Como a microbiota protege contra patógenos?",["Compete por nutrientes e produz substâncias antimicrobianas","Produz perforinas","Libera histamina","Forma o MAC"],0,"É a barreira biológica."],
+["Quais são as células sentinelas residentes nos tecidos?",["Macrófagos, mastócitos e células dendríticas","Neutrófilos, monócitos e NK","Eosinófilos e basófilos","LT CD8+"],0,"Neutrófilos, monócitos e NK são recrutados do sangue."],
+["Qual quimiocina atrai leucócitos, segundo o material?",["IL-8","IL-2","IL-12","IL-4"],0,"Secretada pelos macrófagos."],
+["A vasodilatação local gera quais sinais?",["Rubor e calor","Apenas edema","Apenas dor","Febre"],0,"O edema vem do aumento da permeabilidade vascular."],
+["Qual efeito sistêmico das citocinas ocorre na medula óssea?",["Leucocitose","Febre","Síntese de PCR","Degranulação"],0,"Liberação/produção de neutrófilos."],
+["A PCR é um biomarcador de:",["Inflamação","Anergia","Memória imunológica","Troca de classe"],0,"Liga-se à fosforilcolina bacteriana."],
+["A LLM liga-se a:",["Resíduos de manose do patógeno","Fosforilcolina","B7","MHC I"],0,"Atua como opsonina e ativa o complemento."],
+["O que é uma opsonina?",["Molécula que facilita a fagocitose","Enzima que lisa a parede bacteriana","Citocina que induz febre","Receptor de IL-2"],0,"Ex.: PCR, LLM e C3b."],
+["Quais células degranulam liberando histamina?",["Mastócitos","Neutrófilos","Células NK","Células dendríticas"],0,"Também sintetizam leucotrienos/prostaglandinas."],
+["Para onde as células dendríticas migram após capturar o antígeno?",["Linfonodos drenantes","Medula óssea","Fígado","Hipotálamo"],0,"Migram pelos vasos linfáticos."],
+["As células recrutadas migram do sangue para o tecido guiadas por:",["Gradiente químico (quimiotaxia)","Anticorpos","Perforinas","Receptor de IL-2"],0,"Quimiotaxia."],
+["Quais moléculas ativam as células sentinelas na inflamação?",["PAMPs e DAMPs","IL-2 e IL-15","C5b a C9","IgE e IgG"],0,"É a etapa de ativação."],
+["Quais moléculas induzem o extravasamento de leucócitos para o tecido?",["TNF, IL-1 e quimiocinas (IL-8)","IL-4 e IL-5","Perforinas e granzimas","C9"],0,"Etapa de recrutamento leucocitário."],
+["Qual é a primeira fase do extravasamento leucocitário?",["Rolagem","Diapedese","Adesão estável","Ativação de integrinas"],0,"Rolagem → integrinas → adesão estável → diapedese."],
+["A via alternativa é ativada por:",["Depósito espontâneo de C3b no patógeno","LLM ligada à manose","C1 ligado a anticorpos","C5a"],0,"Lectina usa LLM; clássica usa C1 + anticorpos."],
+["A via da lectina é ativada quando:",["A LLM se liga à manose do patógeno","C1 se liga a IgG","C3b se deposita","A IL-2 se liga ao receptor"],0,"Via da lectina = LLM + manose."],
+["Qual função do complemento é exercida pelo C3b?",["Opsonização","Lise osmótica","Quimiotaxia de neutrófilos","Degranulação de mastócitos"],0,"C3b se deposita no micróbio e facilita a fagocitose."],
+["Quais são os mecanismos de morte bacteriana citados no material?",["Fagocitose e lise osmótica","Apenas perforinas","IgE e eosinófilos","Anergia e memória"],0,"Lise osmótica = MAC."],
+["As anafilatoxinas estimulam:",["Degranulação de mastócitos e quimiotaxia de neutrófilos","Troca de classe para IgE","Formação de clones de T","Apresentação de antígenos"],0,"C3a, C4a e C5a."],
+["Qual o papel das APCs na ponte inata-adaptativa?",["Fagocitam via RRPs, processam e apresentam via MHC II com co-estimulação","Produzem IgE","Lisam células com perforinas","Formam o MAC"],0,"Também fornecem citocinas."],
+["Quais citocinas das APCs são necessárias para ativar o linfócito T?",["IL-1, IL-6 e IL-12","IL-4, IL-5 e IL-13","IL-17 e IL-22","IFN-γ e perforina"],0,"Junto com B7/CD28."],
+["Quantos sinais o linfócito T virgem precisa para ser ativado?",["Três","Dois","Quatro","Um"],0,"Antígeno, co-estimulação e citocinas."],
+["No sinal 2, o CD28 do linfócito T liga-se a:",["B7 da APC","MHC II","IL-2","TCR"],0,"É o sinal de sobrevivência."],
+["O sinal 2 garante que a resposta ocorra somente se:",["A APC tiver sido ativada por um perigo real","Houver febre","Houver IgE circulante","A célula for tumoral"],0,"Sem ele, ocorre anergia."],
+["Após os três sinais, o linfócito T sintetiza:",["IL-2 e a cadeia de alta afinidade do seu receptor","IgE","C3 convertase","Lisozima"],0,"A IL-2 atua de forma autócrina."],
+["Qual perfil ativa macrófagos contra Mycobacterium?",["Th1","Th2","Th17","Basófilo"],0,"Intracelulares: Th1."],
+["Quais moléculas o Th1 estimula nos macrófagos para destruir microrganismos?",["Óxido nítrico (NO) e ROS","Perforinas e granzimas","IgE e histamina","IL-17 e IL-22"],0,"Ativação clássica do macrófago."],
+["Qual citocina do Th2 aumenta o muco e o peristaltismo intestinal?",["IL-13","IL-5","IL-22","IL-12"],0,"IL-5 recruta e ativa eosinófilos."],
+["Qual perfil estimula o linfócito B a trocar para IgE?",["Th2","Th1","Th17","CTL"],0,"A IgE se liga a mastócitos e basófilos."],
+["O Th17 induz células epiteliais, estromais e macrófagos a produzirem quimiocinas para recrutar:",["Neutrófilos","Eosinófilos","Basófilos","Células NK"],0,"Via IL-17 e IL-22."],
+["Quais são os alvos principais dos CTLs?",["Células infectadas (vírus, bactérias/parasitas citoplasmáticos) e tumorais","Helmintos extracelulares","Bactérias extracelulares","Alérgenos"],0,"Células do próprio organismo anormais ou perigosas."],
+["Os CTLs reconhecem antígenos apresentados por:",["MHC classe I em qualquer célula nucleada","MHC II só em APCs","B7","Anticorpos"],0,"Peptídeos endógenos via MHC I."]
+];
+const TH=[["Perfil","Induzido por","Citocinas / mediadores","Alvo","Função"],
+["Th1","IL-12 / IFN-γ","IFN-γ, IL-2","Intracelulares","Ativa macrófagos (NO, ROS); ajuda CD8+"],
+["Th2","IL-4","IL-4, IL-5, IL-13","Helmintos e alérgenos","IgE, eosinófilos, muco, peristaltismo"],
+["Th17","TGF-β + IL-6","IL-17, IL-22","Fungos e bactérias extracelulares","Recruta neutrófilos; protege mucosas"],
+["CTL (CD8+)","IL-2, IFN-γ, IL-15 (ajuda do Th1)","Perforinas e granzimas","Células infectadas e tumorais","Apoptose da célula alvo (MHC I)"]];
+const CP=[["Via","Gatilho"],["Alternativa","C3b depositado espontaneamente no patógeno"],["Lectina","LLM ligada à manose do patógeno"],["Clássica","C1 ligado a IgM ou IgG no patógeno"],["Comum","C3 convertase → C5 convertase → C5 a C9 (MAC)"]];
+const PG=["Sinal 2 ausente = anergia.","CD4+ usa MHC II; CD8+ usa MHC I.","TLRs 1, 2, 4, 5, 6 na superfície; 3, 7, 8, 9 nos endossomos.","Neutrófilo chega primeiro; monócito depois.","PCR liga fosforilcolina; LLM liga manose.","C3a, C4a e C5a são anafilatoxinas; MAC é C5b-C9."];
+const ls={g(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},s(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const TABS=[["resumo","📖","Resumo"],["cartoes","🃏","Cartões"],["quiz","🎯","Quiz"],["tabelas","📊","Tabelas"]];
+const TP=["Todos",...new Set(C.map(c=>c[0]))];
+let tab="resumo",known=new Set(ls.g("bel-known",[])),topic="Todos",pend=false,ci=0,flip=false,qs=[],qi=0,sc=0,ans=null,best=ls.g("bel-best2",null),fin=false,miss=[];
+const $=s=>document.querySelector(s);
+const deck=()=>C.map((c,i)=>({c,i})).filter(x=>(topic=="Todos"||x.c[0]==topic)&&(!pend||!known.has(x.i)));
+const tbl=r=>"<div class=\"tw\"><table><tr>"+r[0].map(h=>"<th>"+h+"</th>").join("")+"</tr>"+r.slice(1).map(x=>"<tr>"+x.map((c,j)=>"<td>"+(j?c:"<b>"+c+"</b>")+"</td>").join("")+"</tr>").join("")+"</table></div>";
+function go(t){tab=t;render();window.scrollTo(0,0)}
+function setTopic(t){topic=t;ci=0;flip=false;render()}
+function togPend(){pend=!pend;ci=0;flip=false;render()}
+function flipC(){flip=!flip;render()}
+function step(d){const n=deck().length;ci=(ci+d+n)%n;flip=false;render()}
+function rnd(){ci=Math.floor(Math.random()*deck().length);flip=false;render()}
+function mark(k){const x=deck()[ci];k?known.add(x.i):known.delete(x.i);ls.s("bel-known",[...known]);flip=false;if(!(pend&&k))ci++;if(ci>=deck().length)ci=0;render()}
+function resetK(){known=new Set();ls.s("bel-known",[]);ci=0;render()}
+const sh=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+function startQ(n){qs=sh(Q).slice(0,n||Q.length).map(q=>{const o=sh(q[1].map((t,i)=>[t,i==q[2]]));return [q[0],o.map(x=>x[0]),o.findIndex(x=>x[1]),q[3]]});qi=0;sc=0;ans=null;fin=false;miss=[];render()}
+function pick(i){if(ans!==null)return;ans=i;if(i==qs[qi][2])sc++;else miss.push(qs[qi]);render()}
+function nextQ(){ans=null;qi++;if(qi>=qs.length){fin=true;const p=Math.round(sc/qs.length*100);if(best===null||p>best){best=p;ls.s("bel-best2",best)}}render()}
+function vResumo(){return "<p class=\"sm\">Toque em cada tópico para abrir.</p>"+S.map(s=>"<details><summary>"+s[0]+"</summary>"+s[1]+"</details>").join("")}
+function vCartoes(){
+let h="<div class=\"chips\">"+TP.map(t=>"<button class=\"chip"+(t==topic?" on":"")+"\" onclick=\"setTopic('"+t+"')\">"+t+"</button>").join("")+"</div>";
+h+="<div class=\"sm\">Sabidos: "+known.size+" de "+C.length+" · <label><input type=\"checkbox\" "+(pend?"checked":"")+" onchange=\"togPend()\"> só pendentes</label></div><div class=\"bar\"><i style=\"width:"+(known.size/C.length*100)+"%\"></i></div>";
+const d=deck();
+if(!d.length)return h+"<div class=\"card\" style=\"text-align:center\">Você já sabe todos os cartões desta seleção! 💖<div class=\"row\"><button class=\"btn main\" onclick=\"resetK()\">Recomeçar tudo</button></div></div>";
+ci=Math.min(ci,d.length-1);const x=d[ci];
+h+="<div class=\"card fc"+(flip?" back":"")+"\" onclick=\"flipC()\" tabindex=\"0\" role=\"button\"><small>"+x.c[0]+" · cartão "+(ci+1)+" de "+d.length+" · toque para virar</small>"+(flip?x.c[2]:"<b>"+x.c[1]+"</b>")+"</div>";
+h+="<div class=\"row\"><button class=\"btn\" onclick=\"mark(false)\">Preciso rever</button><button class=\"btn main\" onclick=\"mark(true)\">Já sei 💖</button></div>";
+return h+"<div class=\"row\"><button class=\"btn\" onclick=\"step(-1)\">← Anterior</button><button class=\"btn\" onclick=\"rnd()\">🎲</button><button class=\"btn\" onclick=\"step(1)\">Próximo →</button></div>"}
+function vQuiz(){
+if(!qs.length)return "<div class=\"card\" style=\"text-align:center\"><h2 style=\"margin-top:0\">Quiz de Imunologia</h2><p>"+Q.length+" questões no banco. A cada rodada, as questões e as alternativas vêm em ordem aleatória.</p>"+(best!==null?"<p class=\"sm\">Melhor resultado: "+best+"%</p>":"")+"<div class=\"row\"><button class=\"btn main\" onclick=\"startQ(10)\">10 questões</button><button class=\"btn main\" onclick=\"startQ(20)\">20 questões</button><button class=\"btn main\" onclick=\"startQ(0)\">Todas</button></div></div>";
+if(fin){const p=Math.round(sc/qs.length*100);return "<div class=\"card\" style=\"text-align:center\"><div class=\"ring\" style=\"--v:"+p+"\"><b>"+sc+"/"+qs.length+"</b></div><p>"+(p>=80?"Arrasou, Laura! 🌸":p>=50?"Está indo bem! Revise os cartões e tente de novo. 💪":"Bora revisar o resumo e os cartões, você consegue! 💗")+"</p>"+(miss.length?"<div style=\"text-align:left\"><b>Para revisar:</b><ul>"+miss.map(m=>"<li>"+m[0]+"<br><span class=\"sm\">Resposta: "+m[1][m[2]]+"</span></li>").join("")+"</ul></div>":"")+"<div class=\"row\"><button class=\"btn main\" onclick=\"startQ(10)\">Nova rodada (10)</button><button class=\"btn\" onclick=\"qs=[];render()\">Escolher tamanho</button></div></div>"}
+const q=qs[qi];
+let h="<div class=\"sm\">Questão "+(qi+1)+" de "+qs.length+" · acertos: "+sc+"</div><div class=\"bar\"><i style=\"width:"+(qi/qs.length*100)+"%\"></i></div><div class=\"q\"><b>"+q[0]+"</b>";
+h+=q[1].map((o,i)=>"<button class=\"opt"+(ans!==null?(i==q[2]?" ok":i==ans?" no":""):"")+"\" onclick=\"pick("+i+")\"><b class=\"lt\">"+"ABCD"[i]+"</b><span>"+o+"</span></button>").join("");
+if(ans!==null)h+="<div class=\"ex\">"+(ans==q[2]?"✅ Certo! ":"❌ Não foi dessa vez. ")+q[3]+"</div><div class=\"row\"><button class=\"btn main\" onclick=\"nextQ()\">"+(qi+1<qs.length?"Próxima":"Ver resultado")+"</button></div>";
+return h+"</div>"}
+function vTab(){return "<h2>Células T: comparativo</h2>"+tbl(TH)+"<h2>Vias do complemento</h2>"+tbl(CP)+"<h2>Pegadinhas de prova</h2><div class=\"card\"><ul style=\"margin:0;padding-left:20px\">"+PG.map(p=>"<li>"+p+"</li>").join("")+"</ul></div>"}
+function render(){
+$("#nav").innerHTML=TABS.map(t=>"<button class=\""+(t[0]==tab?"on":"")+"\" onclick=\"go('"+t[0]+"')\"><span>"+t[1]+"</span>"+t[2]+"</button>").join("");
+$("#app").innerHTML={resumo:vResumo,cartoes:vCartoes,quiz:vQuiz,tabelas:vTab}[tab]()}
+render();
+</script>
+</body>
+</html>
